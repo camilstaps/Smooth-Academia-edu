@@ -1,0 +1,34 @@
+{
+	"manifest_version": 2,
+	"name": "Smooth Academia.edu",
+	"short_name": "Smooth A.edu",
+	"version": "0.1",
+	"description": "Smoothens your Academia.edu experience by disabling annoying features. This is an unofficial add-on.",
+	"homepage": "https://github.com/camilstaps/Smooth-Academia-edu",
+	"author": "Camil Staps",
+	"icons": {
+		"48": "icons/logo-48.png",
+		"96": "icons/logo-96.png"
+	},
+	"permissions": ["storage"],
+	"content_scripts": [
+		{
+			"matches": ["*://*.academia.edu/*"],
+			"js": ["smooth-academia-edu.js"],
+			"run_at": "document_end"
+		}
+	],
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"options_ui": {
+		"page": "options.html",
+		"browser_style": true,
+		"chrome_style": true
+	},
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "smooth-academia-edu@camilstaps.nl"
+		}
+	}
+}
