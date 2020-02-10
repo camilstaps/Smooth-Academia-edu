@@ -1,5 +1,6 @@
 "use strict";
 
+let Browser=typeof browser=='undefined' ? chrome : browser;
 let log=console.debug;
 
 function remove_header_link (text)
@@ -81,7 +82,7 @@ function remove_rating_modals ()
 
 function setup_at_document_end ()
 {
-	browser.storage.sync.get().then (settings => {
+	let callback=function (settings) {
 		if (settings['remove_readers_link'])
 			remove_header_link ('Readers');
 		if (settings['remove_mentions_link'])
@@ -93,7 +94,11 @@ function setup_at_document_end ()
 			remove_menu_item('Upgrade to Premium');
 		if (settings['remove_search_alerts_menu_item'])
 			remove_menu_item('Search Alerts');
-	});
+	};
+	if (typeof browser=='undefined')
+		chrome.storage.sync.get (null,callback);
+	else
+		browser.storage.sync.get().then (callback);
 }
 
 function install_dom_change_handler ()
@@ -113,7 +118,7 @@ function install_dom_change_handler ()
 
 function setup_at_document_idle ()
 {
-	browser.storage.sync.get().then (settings => {
+	let callback=function (settings) {
 		if (settings['remove_bulk_download_links'])
 			remove_bulk_download_links();
 		if (settings['disable_bulk_download_question'])
@@ -123,7 +128,11 @@ function setup_at_document_idle ()
 			remove_rating_modals();
 
 		install_dom_change_handler();
-	});
+	};
+	if (typeof browser=='undefined')
+		chrome.storage.sync.get (null,callback);
+	else
+		browser.storage.sync.get().then (callback);
 }
 
 setup_at_document_end();

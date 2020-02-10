@@ -4,7 +4,7 @@
 	"short_name": "Smooth A.edu",
 	"version": "0.1",
 	"description": "Smoothens your Academia.edu experience by disabling annoying features. This is an unofficial add-on.",
-	"homepage": "https://github.com/camilstaps/Smooth-Academia-edu",
+	"homepage_url": "https://github.com/camilstaps/Smooth-Academia-edu",
 	"author": "Camil Staps",
 	"icons": {
 		"48": "icons/logo-48.png",

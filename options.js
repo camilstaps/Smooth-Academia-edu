@@ -1,5 +1,7 @@
 "use strict";
 
+let Browser=typeof browser=='undefined' ? chrome : browser;
+
 let keys=[
 	'remove_readers_link',
 	'remove_mentions_link',
@@ -15,17 +17,21 @@ let keys=[
 ];
 
 document.addEventListener ('DOMContentLoaded',() => {
-	browser.storage.sync.get().then (settings => {
+	let callback=function (settings) {
 		for (var key in settings)
 			document.getElementById (key).checked=settings[key];
-	});
+	};
+	if (typeof browser=='undefined')
+		chrome.storage.sync.get (null,callback);
+	else
+		browser.storage.sync.get().then (callback);
 
 	keys.forEach (key => {
 		let checkbox=document.getElementById (key);
 		checkbox.addEventListener ('change',function () {
 			let settings={};
 			settings[this.id]=this.checked;
-			browser.storage.sync.set (settings);
+			Browser.storage.sync.set (settings);
 		});
 	});
 });

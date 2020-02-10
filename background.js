@@ -1,6 +1,10 @@
-browser.runtime.onInstalled.addListener (details => {
+"use strict";
+
+let Browser=typeof browser=='undefined' ? chrome : browser;
+
+Browser.runtime.onInstalled.addListener (details => {
 	if (details.reason=='install'){
-		browser.storage.sync.set ({
+		Browser.storage.sync.set ({
 			remove_readers_link: true,
 			remove_mentions_link: true,
 			remove_premium_link: true,
