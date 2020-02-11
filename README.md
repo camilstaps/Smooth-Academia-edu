@@ -2,6 +2,8 @@
 
 ![](/icons/logo-96.png)
 
+[![](https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_2.png)](https://addons.mozilla.org/en-US/firefox/addon/smooth-academia-edu/)
+
 [Academia.edu][] is omnipresent in some academic fields. Unfortunately, the
 website is very frustrating in that it keeps pushing you to buy a Premium
 subscription. [I also have my doubts regarding the usefulness of such a
