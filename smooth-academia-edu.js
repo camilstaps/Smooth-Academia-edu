@@ -21,7 +21,6 @@ function remove_menu_item (text)
 
 	let menu_items=document.querySelectorAll ('.my-account-menu-ul > *');
 	Array.from (menu_items).forEach (item => {
-		log (item.innerText);
 		if (item.innerText.indexOf (text) >= 0)
 			item.parentNode.removeChild (item);
 	});
@@ -66,6 +65,21 @@ function disable_bulk_download_question ()
 		let real_button_clone=real_button.cloneNode (true);
 		real_button_clone.addEventListener ('click',() => window.location=link);
 		btn.replaceChild (real_button_clone,real_button);
+	});
+
+	var work_cards=document.getElementsByClassName ('work-card');
+	Array.from (work_cards).forEach (card => {
+		let i=card.querySelector ('i.fa-arrow-down');
+		if (i==null)
+			return;
+		let link=i.parentNode.parentNode;
+		let script=link.parentNode.querySelector ('script');
+		if (script==null)
+			return;
+		let url=script.innerText.replace (/^[^]*academia\.edu(\/attachments\/\d+\/download_file)[^]*$/,'$1');
+		let link_clone=link.cloneNode (true);
+		link_clone.addEventListener ('click',() => window.location=url);
+		link.parentNode.replaceChild (link_clone,link);
 	});
 }
 
