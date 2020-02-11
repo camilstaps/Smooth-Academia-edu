@@ -10,6 +10,9 @@ let keys=[
 	'remove_premium_menu_item',
 	'remove_search_alerts_menu_item',
 
+	'remove_grants_updates',
+	'remove_readers_updates',
+
 	'disable_bulk_download_question',
 	'remove_bulk_download_links',
 

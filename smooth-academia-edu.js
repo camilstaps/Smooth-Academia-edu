@@ -26,6 +26,19 @@ function remove_menu_item (text)
 	});
 }
 
+function remove_ping (title)
+{
+	log ('Trying to remove '+title+' pings');
+
+	let pings=document.querySelectorAll ('div.onsite-ping');
+	Array.from (pings).forEach (ping => {
+		let title=ping.querySelector ('.title');
+		log (ping,title);
+		if (title!=null && title.innerText.toLowerCase()==title.toLowerCase())
+			ping.parentNode.removeNode (ping);
+	});
+}
+
 function remove_bulk_download_links ()
 {
 	log ('removing bulk download buttons');
@@ -133,6 +146,11 @@ function install_dom_change_handler ()
 function setup_at_document_idle ()
 {
 	let callback=function (settings) {
+		if (settings['remove_grants_updates'])
+			remove_ping ('Grants update');
+		if (settings['remove_readers_updates'])
+			remove_ping ('Readers update');
+
 		if (settings['remove_bulk_download_links'])
 			remove_bulk_download_links();
 		if (settings['disable_bulk_download_question'])

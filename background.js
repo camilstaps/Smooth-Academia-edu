@@ -12,6 +12,9 @@ Browser.runtime.onInstalled.addListener (details => {
 			remove_premium_menu_item: true,
 			remove_search_alerts_menu_item: true,
 
+			remove_grants_updates: true,
+			remove_readers_updates: true,
+
 			disable_bulk_download_question: true,
 			remove_bulk_download_links: true,
 
