@@ -16,6 +16,7 @@
 	"content_scripts": [
 		{
 			"matches": ["*://*.academia.edu/*"],
+			"css": ["smooth-academia-edu.css"],
 			"js": ["smooth-academia-edu.js"],
 			"run_at": "document_end"
 		}
