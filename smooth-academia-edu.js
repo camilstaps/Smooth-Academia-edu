@@ -39,6 +39,17 @@ function remove_ping (title)
 	});
 }
 
+function remove_analytics_tab (title)
+{
+	log ('Trying to remove '+title+' analytics tab');
+
+	let tabs=document.querySelectorAll ('.analytics-dashboard-container li');
+	Array.from (tabs).forEach (tab => {
+		if (tab.innerText.toLowerCase()==title.toLowerCase())
+			tab.parentNode.removeChild (tab);
+	});
+}
+
 function remove_bulk_download_links ()
 {
 	log ('removing bulk download buttons');
@@ -123,6 +134,11 @@ function setup_at_document_end ()
 			remove_menu_item('Upgrade to Premium');
 		if (settings['remove_search_alerts_menu_item'])
 			remove_menu_item('Search Alerts');
+
+		if (settings['remove_profile_visitors_analytics'])
+			remove_analytics_tab ('Profile visitors');
+		if (settings['remove_cv_analytics'])
+			remove_analytics_tab ('CV');
 	};
 	if (typeof browser=='undefined')
 		chrome.storage.sync.get (null,callback);

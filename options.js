@@ -14,6 +14,9 @@ let keys=[
 	'remove_grants_updates',
 	'remove_readers_updates',
 
+	'remove_profile_visitors_analytics',
+	'remove_cv_analytics',
+
 	'disable_bulk_download_question',
 	'remove_bulk_download_links',
 
