@@ -30,12 +30,12 @@ function remove_ping (title)
 {
 	log ('Trying to remove '+title+' pings');
 
-	let pings=document.querySelectorAll ('div.onsite-ping');
+	let pings=document.querySelectorAll ('div.onsite-ping.visible');
 	Array.from (pings).forEach (ping => {
 		let title=ping.querySelector ('.title');
 		log (ping,title);
 		if (title!=null && title.innerText.toLowerCase()==title.toLowerCase())
-			ping.parentNode.removeNode (ping);
+			ping.classList.remove ('visible');
 	});
 }
 

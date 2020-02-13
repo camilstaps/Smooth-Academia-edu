@@ -1,8 +1,7 @@
-# Smooth Academia.edu
+# ![](/icons/logo-48.png) <sup>Smooth Academia.edu</sup>
 
-![](/icons/logo-96.png)
-
-[![](https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_2.png)](https://addons.mozilla.org/en-US/firefox/addon/smooth-academia-edu/)
+<sup>[![](https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_2.png)](https://addons.mozilla.org/en-US/firefox/addon/smooth-academia-edu/)</sup>
+[![](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png)](https://chrome.google.com/webstore/detail/smooth-academiaedu/aeohigfgkmgceofpjhmfmeiembnpobme)
 
 [Academia.edu][] is omnipresent in some academic fields. Unfortunately, the
 website is very frustrating in that it keeps pushing you to buy a Premium
