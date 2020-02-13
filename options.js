@@ -5,6 +5,7 @@ let Browser=typeof browser=='undefined' ? chrome : browser;
 let keys=[
 	'remove_readers_link',
 	'remove_mentions_link',
+	'remove_grants_link',
 	'remove_premium_link',
 
 	'remove_premium_menu_item',

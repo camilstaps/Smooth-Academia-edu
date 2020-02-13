@@ -7,6 +7,7 @@ Browser.runtime.onInstalled.addListener (details => {
 		Browser.storage.sync.set ({
 			remove_readers_link: true,
 			remove_mentions_link: true,
+			remove_grants_link: true,
 			remove_premium_link: true,
 
 			remove_premium_menu_item: true,

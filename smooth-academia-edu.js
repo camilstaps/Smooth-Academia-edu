@@ -114,6 +114,8 @@ function setup_at_document_end ()
 			remove_header_link ('Readers');
 		if (settings['remove_mentions_link'])
 			remove_header_link ('Mentions');
+		if (settings['remove_grants_link'])
+			remove_header_link ('Grants');
 		if (settings['remove_premium_link'])
 			remove_header_link ('Premium');
 
