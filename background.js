@@ -14,6 +14,7 @@ Browser.runtime.onInstalled.addListener (details => {
 			remove_search_alerts_menu_item: true,
 
 			remove_grants_updates: true,
+			remove_mentions_updates: true,
 			remove_readers_updates: true,
 
 			remove_profile_visitors_analytics: true,

@@ -166,6 +166,8 @@ function setup_at_document_idle ()
 	let callback=function (settings) {
 		if (settings['remove_grants_updates'])
 			remove_ping ('Grants update');
+		if (settings['remove_mentions_updates'])
+			remove_ping ('Mentions update');
 		if (settings['remove_readers_updates'])
 			remove_ping ('Readers update');
 

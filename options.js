@@ -12,6 +12,7 @@ let keys=[
 	'remove_search_alerts_menu_item',
 
 	'remove_grants_updates',
+	'remove_mentions_updates',
 	'remove_readers_updates',
 
 	'remove_profile_visitors_analytics',
