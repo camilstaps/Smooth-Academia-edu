@@ -32,9 +32,8 @@ function remove_ping (title)
 
 	let pings=document.querySelectorAll ('div.onsite-ping.visible');
 	Array.from (pings).forEach (ping => {
-		let title=ping.querySelector ('.title');
-		log (ping,title);
-		if (title!=null && title.innerText.toLowerCase()==title.toLowerCase())
+		let title_span=ping.querySelector ('.title');
+		if (title_span!=null && title_span.innerText.toLowerCase()==title.toLowerCase())
 			ping.classList.remove ('visible');
 	});
 }
