@@ -1,3 +1,8 @@
+/* Occasional discount banners at the top */
+.js-discount-unibrow {
+	display: none;
+}
+
 /* Column on the right of the papers list on a profile containing advertisement and a premium link */
 .profile--cols_container > .col-300 {
 	display: none;
