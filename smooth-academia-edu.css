@@ -7,3 +7,12 @@
 .profile--cols_container > .col-300 {
 	display: none;
 }
+
+/* Sidebar widget on main page */
+.js-premium-upsell-sidebar {
+	margin-bottom: -32px;
+}
+
+.js-premium-upsell-sidebar * {
+	display: none;
+}
