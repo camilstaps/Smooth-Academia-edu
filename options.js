@@ -21,6 +21,8 @@ let keys=[
 	'disable_bulk_download_question',
 	'remove_bulk_download_links',
 
+	'remove_key_takeaways_links',
+
 	'remove_rating_modals'
 ];
 

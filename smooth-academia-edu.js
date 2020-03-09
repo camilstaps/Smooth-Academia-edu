@@ -106,6 +106,14 @@ function disable_bulk_download_question ()
 	});
 }
 
+function remove_key_takeaways_links ()
+{
+	log ('removing key takeaways buttons');
+
+	var key_takeaways_buttons=document.getElementsByClassName ('key-takeaways--button');
+	Array.from (key_takeaways_buttons).forEach (btn => btn.parentNode.parentNode.parentNode.remove());
+}
+
 function remove_rating_modals ()
 {
 	let rating_modals=document.getElementsByClassName ('work-rating--modal-inner');
@@ -174,6 +182,9 @@ function setup_at_document_idle ()
 			remove_bulk_download_links();
 		if (settings['disable_bulk_download_question'])
 			disable_bulk_download_question();
+
+		if (settings['remove_key_takeaways_links'])
+			remove_key_takeaways_links();
 
 		if (settings['remove_rating_modals'])
 			remove_rating_modals();

@@ -23,6 +23,8 @@ Browser.runtime.onInstalled.addListener (details => {
 			disable_bulk_download_question: true,
 			remove_bulk_download_links: true,
 
+			remove_key_takeaways_links: true,
+
 			remove_rating_modals: true
 		});
 	}
