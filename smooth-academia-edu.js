@@ -114,6 +114,19 @@ function remove_key_takeaways_links ()
 	Array.from (key_takeaways_buttons).forEach (btn => btn.parentNode.parentNode.parentNode.remove());
 }
 
+function disable_key_takeaways ()
+{
+	log ('removing 5-Minute Overview tabs')
+
+	var tab=document.getElementById ('js--key-takeaways-tab');
+	if (tab==null)
+		return;
+
+	tab.style.display='none';
+	tab.previousElementSibling.click();
+	tab.previousElementSibling.style.display='none';
+}
+
 function remove_rating_modals ()
 {
 	let rating_modals=document.getElementsByClassName ('work-rating--modal-inner');
@@ -185,6 +198,8 @@ function setup_at_document_idle ()
 
 		if (settings['remove_key_takeaways_links'])
 			remove_key_takeaways_links();
+		if (settings['disable_key_takeaways'])
+			disable_key_takeaways();
 
 		if (settings['remove_rating_modals'])
 			remove_rating_modals();
