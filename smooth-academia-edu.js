@@ -190,6 +190,8 @@ function setup_at_document_idle ()
 			remove_ping ('Mentions update');
 		if (settings['remove_readers_updates'])
 			remove_ping ('Readers update');
+		if (settings['remove_bulk_download_links'])
+			remove_ping ('Bulk Download Books');
 
 		if (settings['remove_bulk_download_links'])
 			remove_bulk_download_links();
