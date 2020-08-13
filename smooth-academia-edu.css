@@ -3,6 +3,11 @@
 	display: none;
 }
 
+/* Upgrade button in top nav bar */
+.NavLinks-premium-button {
+	display: none !important;
+}
+
 /* Column on the right of the papers list on a profile containing advertisement and a premium link */
 .profile--cols_container > .col-300 {
 	display: none;
