@@ -123,8 +123,6 @@ function disable_key_takeaways ()
 		return;
 
 	tab.style.display='none';
-	tab.previousElementSibling.click();
-	tab.previousElementSibling.style.display='none';
 }
 
 function remove_rating_modals ()
