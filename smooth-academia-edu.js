@@ -122,6 +122,11 @@ function remove_key_takeaways_links ()
 
 	var key_takeaways_buttons=document.getElementsByClassName ('key-takeaways--button');
 	Array.from (key_takeaways_buttons).forEach (btn => btn.parentNode.parentNode.parentNode.remove());
+
+	var summary_buttons=document.getElementsByClassName ('swp-tcr--cta-button');
+	Array.from (summary_buttons)
+		.filter (btn => btn.childNodes.length >= 2 && btn.childNodes[1].innerText == 'Summary')
+		.forEach (btn => btn.parentNode.removeChild (btn));
 }
 
 function disable_key_takeaways ()
