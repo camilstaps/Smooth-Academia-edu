@@ -20,6 +20,7 @@ let keys=[
 
 	'disable_bulk_download_question',
 	'remove_bulk_download_links',
+	'remove_full_pdf_package_links',
 
 	'disable_key_takeaways',
 	'remove_key_takeaways_links',

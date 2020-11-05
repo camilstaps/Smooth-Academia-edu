@@ -106,6 +106,16 @@ function disable_bulk_download_question ()
 	});
 }
 
+function remove_full_pdf_package_links ()
+{
+	log ('removing full PDF package buttons');
+
+	var full_pdf_package_buttons=document.getElementsByClassName ('swp-tcr--extra-content-md');
+	Array.from (full_pdf_package_buttons)
+		.filter (btn => /Full PDF Package/.test (btn.innerText))
+		.forEach (btn => btn.parentNode.parentNode.removeChild (btn.parentNode));
+}
+
 function remove_key_takeaways_links ()
 {
 	log ('removing key takeaways buttons');
@@ -195,6 +205,8 @@ function setup_at_document_idle ()
 			remove_bulk_download_links();
 		if (settings['disable_bulk_download_question'])
 			disable_bulk_download_question();
+		if (settings['remove_full_pdf_package_links'])
+			remove_full_pdf_package_links();
 
 		if (settings['remove_key_takeaways_links'])
 			remove_key_takeaways_links();
