@@ -7,11 +7,14 @@ function remove_header_link (text)
 {
 	log ('Trying to remove '+text+' header link');
 
-	let nav_links=document.getElementsByClassName ('NavLinks-link');
+	let nav_links=document.querySelectorAll ('#main-header-container a');
 	Array.from (nav_links).forEach (link => {
-		let span=link.querySelector ('.light, .u-tcBlue');
-		if (span!=null && span.innerText.toLowerCase()==text.toLowerCase())
-			link.parentNode.removeChild (link);
+		if (link.innerText.toLowerCase()==text.toLowerCase()){
+			if (link.parentNode.tagName=='LI')
+				link.parentNode.parentNode.removeChild (link.parentNode);
+			else
+				link.parentNode.removeChild (link);
+		}
 	});
 }
 
@@ -19,9 +22,9 @@ function remove_menu_item (text)
 {
 	log ('Trying to remove '+text+' user menu item');
 
-	let menu_items=document.querySelectorAll ('.my-account-menu-ul > *');
+	let menu_items=document.querySelectorAll ('#main-header-container a');
 	Array.from (menu_items).forEach (item => {
-		if (item.innerText.indexOf (text) >= 0)
+		if (item.innerText.toLowerCase().indexOf (text.toLowerCase()) >= 0)
 			item.parentNode.removeChild (item);
 	});
 }
