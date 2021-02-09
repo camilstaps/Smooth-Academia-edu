@@ -27,7 +27,8 @@ Browser.runtime.onInstalled.addListener (details => {
 			disable_key_takeaways: true,
 			remove_key_takeaways_links: true,
 
-			remove_rating_modals: true
+			remove_rating_modals: true,
+			remove_discussion_modals: true
 		});
 	}
 });

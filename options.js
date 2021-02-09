@@ -25,7 +25,8 @@ let keys=[
 	'disable_key_takeaways',
 	'remove_key_takeaways_links',
 
-	'remove_rating_modals'
+	'remove_rating_modals',
+	'remove_discussion_modals'
 ];
 
 document.addEventListener ('DOMContentLoaded',() => {

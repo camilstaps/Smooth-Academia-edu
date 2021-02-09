@@ -151,6 +151,18 @@ function remove_rating_modals ()
 	});
 }
 
+function remove_discussion_modals ()
+{
+	let discussion_modals=
+		Array.from (document.getElementsByClassName ('work-rating--modal-inner'));
+	log ('removing '+discussion_modals.length+' discussion modal(s)');
+	/*discussion_modals.forEach (mdl => {
+		let ev=document.createEvent ('MouseEvents');
+		ev.initMouseEvent ('click',true,true,window,1,0,0,0,0,false,false,false,false,0,null);
+		mdl.querySelector ('.u-clickable').dispatchEvent (ev);
+	});*/
+}
+
 function setup_at_document_end ()
 {
 	let callback=function (settings) {
@@ -220,6 +232,8 @@ function setup_at_document_idle ()
 
 		if (settings['remove_rating_modals'])
 			remove_rating_modals();
+		if (settings['remove_discussion_modals'])
+			remove_discussion_modals();
 
 		install_dom_change_handler();
 	};
