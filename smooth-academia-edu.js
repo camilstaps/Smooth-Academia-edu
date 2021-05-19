@@ -125,8 +125,8 @@ function remove_article_download_link (string)
 {
 	log ('removing '+string+' buttons');
 
-	var full_pdf_package_buttons=document.getElementsByClassName ('swp-tcr--cta-button');
-	Array.from (full_pdf_package_buttons)
+	var download_buttons=document.getElementsByClassName ('swp-tcr--cta-button');
+	Array.from (download_buttons)
 		.filter (btn => btn.innerText.indexOf (string) >= 0)
 		.forEach (btn => btn.parentNode.removeChild (btn));
 }
@@ -243,6 +243,8 @@ function setup_at_document_idle ()
 		}
 		if (settings['remove_figures_links'])
 			remove_article_download_link ('Download Figures');
+		if (settings['remove_translate_links'])
+			remove_article_download_link ('Translate PDF');
 
 		if (settings['remove_key_takeaways_links'])
 			remove_key_takeaways_links();
