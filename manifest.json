@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Smooth Academia.edu",
 	"short_name": "Smooth A.edu",
-	"version": "0.3.5",
+	"version": "0.3.6",
 	"description": "Smoothens your Academia.edu experience by disabling annoying features. This is an unofficial add-on.",
 	"homepage_url": "https://github.com/camilstaps/Smooth-Academia-edu",
 	"author": "Camil Staps",
